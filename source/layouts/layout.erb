@@ -7,13 +7,54 @@
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     
     <!-- Use title if it's in the page YAML frontmatter -->
-    <title><%= current_page.data.title || "The Middleman" %></title>
+    <title><%= current_page.data.title || "An archive of beautiful things" %></title>
     
-    <%= stylesheet_link_tag "normalize", "all" %>
+    <%= stylesheet_link_tag "normalize", "styles" %>
     <%= javascript_include_tag  "all" %>
   </head>
   
   <body class="<%= page_classes %>">
+    <div id="header">
+      <div class="pale">
+        <div class="title">
+          <h2>An archive of beautiful things by</h2>
+          <h1>Shannon E. Thomas</h1>
+        </div>
+
+        <ul class="navigation">
+          <li class="link"><%= nav_link "artworks", "index.html" %></li>
+          <li class="link"><%= nav_link "sketches", "sketches.html" %></li>
+        </ul>
+      </div>
+    </div>
+    
     <%= yield %>
+
+    <div id="footer">
+      <div class="pale">
+        <div class="half">
+          <p class="quarter">If you enjoy my paintings and other creations, please take a moment to like my page on <a href="https://www.facebook.com/ShannonEThomasArt">Facebook</a> or follow me on <a href="https://twitter.com/shannonethomas">Twitter</a>.</p>
+          <p class="quarter">Last year I co-founded <a href="http://theartificial.nl">The Artificial</a>, a small digital product design agency in Amsterdam.</p>
+        </div>
+        
+        <div class="half">
+        <p class="quarter">You can find my personal design portfolio on <a href="https://www.behance.net/shannonethomas">Behance</a> and explore works in progress on <a href="http://dribbble.com/shannonethomas">Dribbble</a>.</p>
+        <p class="quarter">Find my photography on <a href="http://www.flickr.com/photos/alwaysayingoodbye/">Flickr</a> and <a href="http://statigr.am/shannonethomas">Instagram</a>. For past thoughts, blog archives will be arriving soon.</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+      try {
+        var pageTracker = _gat._getTracker("UA-4427180-2");
+        pageTracker._trackPageview();
+      } catch(err) {}
+    </script>
+    
   </body>
 </html>

@@ -26,8 +26,7 @@
 
 # Proxy pages (http://middlemanapp.com/basics/dynamic-pages/)
 # proxy "/this-page-has-no-template.html", "/template-file.html", :locals => {
-#  :which_fake_page => "Rendering a fake page with a local variable" }
-
+#  :which_fake_page => "Rendering a fake page with a local variable" } 
 ###
 # Helpers
 ###
@@ -44,6 +43,13 @@
 #     "Helping"
 #   end
 # end
+helpers do
+  def nav_link(link_text, url, options = {})  
+    options[:class] ||= ""
+    options[:class] << " current" if link_text == current_resource.data.navigation
+    link_to(link_text, url, options)
+  end
+end
 
 set :css_dir, 'stylesheets'
 
