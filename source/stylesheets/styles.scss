@@ -5,6 +5,8 @@ body {
   margin: 0;
   background-color: $white;
   
+  min-width: 480px;
+  
   font-family: Georgia, Times, serif;
   font-size: 1em;
   color: #0F1919;  
@@ -73,6 +75,7 @@ img {
 
 .pale {
   margin: 0 auto;
+  padding: 0 10px 0 10px;
   max-width: 960px;
 }
 
@@ -143,14 +146,15 @@ img {
   
   img {
     width: 24%;
-    margin: .4%;
+    margin: .3%;
     padding: 0;
+    min-width: 220px;
   }
 }
 
 .half {
   width: 48%;
-  margin: 0 .8% 0 .8%;
+  margin: 0 .7% 0 .7%;
   min-width: 440px;
   float: left;
   
@@ -165,7 +169,7 @@ img {
 
 .quarter {
   float: left;
-  width: 41%;
+  width: 40%;
   margin: 0;
   height: 70px;
   padding: 0;
@@ -173,8 +177,10 @@ img {
 
 #footer {
   bottom: 0;
+  overflow: auto;
   
-  height: 240px;
+  padding-top: 40px;
+  padding-bottom: 60px;
   width: 100%;
   background-color: $lightgrey;
   
