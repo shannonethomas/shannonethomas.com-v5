@@ -57,6 +57,16 @@ set :js_dir, 'javascripts'
 
 set :images_dir, 'images'
 
+activate :blog do |blog|
+  blog.prefix = ""
+  blog.sources = "/blog/{year}-{month}-{day}-{title}.html"
+  blog.permalink = "/blog/{year}/{month}/{day}/{title}.html"
+  blog.layout = "blog-article"
+  blog.default_extension = ".md"
+  blog.summary_separator = /READMORE/
+end
+page "/blog/feed.xml", layout: false
+
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment

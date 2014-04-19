@@ -1,0 +1,11 @@
+<% wrap_layout :layout do %>
+
+<div id="content">
+  <div class="pale">
+    <h1><%= current_page.title %></h1>
+    <div class="date"><time datetime="<%= current_page.date.strftime('%Y-%m-%d') %>"><%= current_page.date.strftime('%B %e, %Y') %></time></div>
+    <%= yield %>
+  </div>
+</div>
+
+<% end %>
