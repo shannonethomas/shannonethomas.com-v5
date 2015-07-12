@@ -1,15 +1,71 @@
 <% wrap_layout :site_layout do %>
 
-	<nav id="header">		
+	<nav id="header">
 		<div class="flexcontainer">
-			<div id="navigation" class="col-12">
+			<div id="_navigation" class="col-12">
 				<div class="padded">
 						<h2>Hello, I’m Shannon E. Thomas. I love to <a href="index.html">paint and draw</a>. I don’t go anywhere without my <a href="sketches.html">sketchbook</a>. In 2013, I founded <a href="http://www.theartificial.nl">The Artificial</a>, a boutique UX agency in Amsterdam. I am surrounded by <a href="people.html">people</a> who keep me motivated and inspired. Want to see more? I’m all over <a href="elsewhere.html">the internet</a>.</h2>
 				</div>
 			</div>
-		</div>		
+		</div>
+		<div class="trigger"> </div>
 	</nav>
-		
+
+	<style>
+		#header {
+			position: fixed;
+			top: -150px;
+			left: 0;
+			z-index: 102;
+			width: 100%;
+			height: 150px;
+
+			background-color: #000000;
+			color: #EEEEEE;
+		}
+		#header * {
+			color: #AAAAAA;
+		}
+		#header A {
+			color: #EEEEEE;
+		}
+
+		#header.open {
+			top: 0;
+		}
+
+		#header .trigger {
+			position: absolute;
+			bottom: -60px; /* "margin" + height */
+			left: 10px; /* "margin" */
+			margin: 0px;
+			z-index: 101;
+			width: 50px;
+			height: 50px;
+
+			background-color: #000000;
+			color: #FFFFFF;
+		}
+
+		#header .trigger:before {
+			content: "=";
+		}
+		#header.open .trigger:before {
+			content: "\d7"; /* &times; */
+		}
+
+		#header {
+			-webkit-transition: top 0.3s ease;
+			-moz-transition: top 0.3s ease;
+			transition: top 0.3s ease;
+		}
+	</style>
+
+	<script>
+		$("#header .trigger").on("click", function() {
+			$("#header").toggleClass("open");
+		});
+	</script>
 
 <%= yield %>
 <% end %>
