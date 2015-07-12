@@ -30,14 +30,6 @@
 <%# TODO add Google tracking ID %>
 <% content_for :google_tracking_id, "" %>
 
-<script type="text/javascript">
-	$( document ).ready(function() {
-	  scrollspy("#nav-primary", 30);
-		eversearch();
-		listfilter();
-	});
-</script>
-
 <%= yield %>
 
 <% end %>
