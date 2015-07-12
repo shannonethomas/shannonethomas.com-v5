@@ -28,15 +28,13 @@
 
 	#footer {
 		margin-top: 80px;
+		padding: 40px 0 40px 0;
 		width: 100%;
 		display: block;
+		background-color: $cool-grey-10;
 		
 		.flexcontainer
-		{
-			border-top-width: 1px;
-			border-top-style: solid;
-		}
-		
+
 		p {
 			font-size: .9em;
 		}
