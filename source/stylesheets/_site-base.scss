@@ -24,7 +24,6 @@
 	}
 }
 
-
 #header.open {
 	top: 0;
 }
@@ -56,6 +55,30 @@
 	-webkit-transition: top 0.3s ease;
 	-moz-transition: top 0.3s ease;
 	transition: top 0.3s ease;
+}
+
+#header-home {
+	background-color: $cool-grey-90;
+	h2 {
+		font-size: 1.8em;
+	}
+}
+
+#index-nav {
+	h2 {
+		color: $cool-grey-20;
+		font-weight: 300;
+		padding: 60px 0 60px 0;
+
+		a {
+			color: $cool-grey-10;
+			font-weight: 600;
+		}
+
+		a:hover {
+			color: $white;
+		}
+	}
 }
 
 // content
@@ -98,8 +121,12 @@
 	  to(rgba(0,0,0,0.75))
 	);
 
-	p {
+	h1, h2, p {
 			color: $white;
+			a {
+				font-weight: 600;
+				color: $white;
+			}
 	}
 
 	a.button {
@@ -114,6 +141,18 @@
 .centered {
 	text-align: center;
 }
+
+.outlink {
+	height: 40px;
+	padding: 120px 0 120px 0;
+	display: block;
+	background-color: $turquoise;
+	a {
+		font-weight: 700;
+		color: $white;
+	}
+}
+
 
 // footer
 
