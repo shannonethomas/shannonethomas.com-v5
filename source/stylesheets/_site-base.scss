@@ -1,38 +1,20 @@
 // for header and footer elements
 
-.padded-lr {
-	padding: 10px 16px 10px 16px;
-}
-
 // top header
 // mobile
 @media only screen {
-	#header {
-		background-color: $white;
-
-		.topbar {
-			border-top-color: $turquoise;
+	.preview {
+		p {
+			text-align: center;
 		}
-		
-		.flexcontainer {
-			border-bottom-color: $warm-grey-20;
+		a.button {
+			text-align: center;
+			background-color: $cool-grey-80;
+			color: $white;
+			padding: 10px 30px 10px 30px;
 		}
-		
-		#nav-primary {
-			ul {	
-				li {
-					a {
-						color: $warm-grey-90;
-					}
-		
-					a:hover {
-						color: $turquoise;
-					}
-				}
-				li.active a {
-					color: $turquoise;
-				}
-			}
+		a.button:hover {
+			background-color: $cool-grey-70;
 		}
 	}
 	
@@ -61,9 +43,6 @@
 // mobile, tablet, and desktop
 @media only screen {
 	#header-side {
-		.topbar {
-			border-top-color: $turquoise;
-		}
 		.flexcontainer {
 			li {
 				margin: 40px 0 0 0;
@@ -113,119 +92,6 @@
 		a:hover {
 			color: $dark-turquoise;
 		}
-	}
-}
-
-// eversearch
-
-#oncall {
-	background-color:rgba(255, 255, 255, 0.9);
-}
-
-
-// forms and fields
-.search {
-	background-color: $warm-grey-10;
-	border: none;
-	border-radius: 3px;
-	
-	.button {
-		background-color: $turquoise;
-		border: none;
-		border-radius: 0 3px 3px 0;
-		color: $white;
-		transition: background-color 0.4s ease;
-	}
-	.button:hover {
-		background-color: $dark-turquoise;
-	  transition: background-color 0.4s ease;
-	}
-}
-
-.field.signin {
-	background-color: $white;
-}
-
-.field {
-	background-color: $warm-grey-10;
-	border: none;
-	border-radius: 3px;
-}
-
-.button {
-	border: none;
-	border-radius: 3px;
-	color: $white;
-	transition: background-color 0.4s ease;
-}
-
-.button:hover {
-  transition: background-color 0.4s ease;
-}
-
-.button.primary {
-	background-color: $turquoise;
-}
-
-.button.primary:hover {
-	background-color: $dark-turquoise;	
-}
-
-.button.secondary {
-	background-color: $warm-grey-30;
-}
-
-.button.secondary:hover {
-	background-color: $warm-grey-50;
-}
-
-.selection {
- border: none;
- background-color: $warm-grey-10;
-}
-
-.dropdown-menu {
-
-	ul {
-		outline: none;
-		
-		li {
-			background-color: $warm-grey-10;
-			border-radius: 3px;
-			
-			a {
-				color: $warm-grey-90;
-			}
-			
-			ul {
-				border-radius: 3px;
-				
-				li {
-					border-radius: 0px;
-				}
-				
-				li:hover {
-					background-color: $turquoise;
-				}
-			}
-		}
-		
-		li:hover
-		{
-			ul {
-				display:block
-			}
-		}
-	}
-}	
-
-#animal-list {
-  .padded {
-		transition: opacity 0.8s ease;
-	}
-	.filter-off {
-		opacity: 0.1;
-	  transition: opacity 0.8s ease;
 	}
 }
 

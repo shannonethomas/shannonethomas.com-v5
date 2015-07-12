@@ -2,19 +2,26 @@
 // this document should not be edited
 // ever
 
-img + h1, img + h2, img + h3, img + h4, img + h5, img + p {
+h1, h2, h3, h4, h5, p, ul, li, a {
 	margin: 0;
-	padding: 20px 0 20px 0;
+	padding: 0;
 	color: $warm-grey-90;
-}
-
-h1, h2, h3, h5, p {
-	margin: 0;
-	padding-bottom: 20px;
-}
-
-h1, h2, h3, h4, h5, p, ul, li {
 	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#navigation {
+	h2 {
+		color: $cool-grey-20;
+		font-weight: 300;
+		padding: 60px 0 60px 0;
+		a {
+			color: $cool-grey-10;
+			font-weight: 600;
+		}
+		a:hover {
+			color: $white;
+		}		
+	}
 }
 
 h1 {
@@ -52,7 +59,7 @@ h1, h2, h3, h4, h5, p {
 
 	h2 {
 		font-size: 1.2em;
-		line-height: 1.2em;
+		line-height: 1.4em;
 	}
 
 	h3 {
@@ -81,7 +88,7 @@ h1, h2, h3, h4, h5, p {
 
 	h2 {
 		font-size: 1.2em;
-		line-height: 1.2em;
+		line-height: 1.4em;
 	}
 
 	h3 {
