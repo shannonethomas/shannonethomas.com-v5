@@ -28,13 +28,12 @@ h1, h2, h3, h4, h5, p, ul, li, a {
 }
 
 h1 {
-	font-weight: 600;
+	font-weight: 700;
+	text-align: center;
 }
 
-h4 {
-	text-transform: uppercase;
-	margin: 0;
-	padding-bottom: 10px;
+h3 {
+	font-style: italic;
 }
 
 ul, li {
@@ -70,11 +69,6 @@ h1, h2, h3, h4, h5, p {
 		line-height: 1.11em;
 	}
 
-	h4 {
-		font-size: .8em;
-		line-height: 1.2em;
-	}
-
 	p, li, ul, a {
 		font-size: 1em;
 		line-height: 1em;
@@ -88,25 +82,19 @@ h1, h2, h3, h4, h5, p {
 		line-height: 1.5em;
 	}
 
-
 	h2 {
 		font-size: 1.2em;
 		line-height: 1.4em;
 	}
-
+	
 	h3 {
 		font-size: 1.125em;
 		line-height: 1.11em;
 	}
-
-	h4 {
-		font-size: .8em;
-		line-height: 1.2em;
-	}
-
+	
 	p, li, ul, a {
 		font-size: 1em;
-		line-height: 1em;
+		line-height: 1.2em;
 	}
 }
 
@@ -127,14 +115,9 @@ h1, h2, h3, h4, h5, p {
 		font-size: 1.125em;
 		line-height: 1.11em;
 	}
-
-	h4 {
-		font-size: .8em;
-		line-height: 1.2em;
-	}
-
+	
 	p, li, ul, a {
 		font-size: 1em;
-		line-height: 1em;
+		line-height: 1.2em;
 	}
 }
