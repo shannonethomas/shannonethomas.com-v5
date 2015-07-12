@@ -70,18 +70,13 @@ img {
 			margin-right: 0;
 		}
 	}
-	
-	.card {
-		margin: 8px 8px 0 8px;
-		overflow: hidden;
-		
-		.padded {
-			padding: 14px;
-		}
-	}
 
 	.padded {
-		padding: 22px;
+		padding: 8px;
+	}	
+	
+	.description {
+		padding: 40px 0 40px 0;
 	}
 }
 
@@ -148,18 +143,6 @@ img {
 		.right-9 { margin-right: $col-width*9; }
 		.right-10 { margin-right: $col-width*10; }
 		.right-11 { margin-right: $col-width*11; }
-	}
-	
-	.card {
-		margin: 2px;
-		
-		.padded {
-			padding: 14px;
-		}
-	}
-	
-	.padded {
-		padding: 16px;
 	}
 }
 

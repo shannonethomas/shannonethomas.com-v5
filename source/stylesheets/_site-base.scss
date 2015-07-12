@@ -6,15 +6,17 @@
 }
 
 .preview {
+	padding: 60px 0 60px 0;
 	p {
-		text-align: center;
+		padding-top: 20px;
 	}
+	
 	a.button {
-		text-align: center;
-		margin: 0 auto;
 		background-color: $cool-grey-80;
 		color: $white;
 		padding: 10px 30px 10px 30px;
+		margin-top: 30px;
+		display: inline-block;
 	}
 	a.button:hover {
 		background-color: $cool-grey-70;
@@ -35,6 +37,10 @@
 	a.button:hover {
 		background-color: $cool-grey-10;
 	}
+}
+
+.centered {
+	text-align: center;
 }
 
 // footer
