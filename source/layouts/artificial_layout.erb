@@ -1,0 +1,137 @@
+<!doctype html>
+
+<html>
+	<head>		
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title><%= current_page.data.title || 'The Artificial' %></title>
+
+		<!-- favicon and apple touch icon -->
+		<%= yield_content :favicon_element %>
+		
+		
+		<!-- basic SEO -->
+		<meta name="keywords" content="<%= yield_content :keywords %>" />
+		<meta name="description" content="<%= yield_content :description %>" />
+		
+		<!-- Twitter summary card -->
+		<meta property="twitter:creator:id" content="1382202606" /> <!-- this is @veryartificial -->
+		<meta property="twitter:title" content="<%=  yield_content :title %>" />
+		<meta property="twitter:description" content="<%=  yield_content :description %>" />
+
+		<!-- Facebook OpenGraph -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="<%= yield_content :url %>" />
+		<meta property="og:title" content="<%=  yield_content :title %>" />
+		<meta property="og:description" content="<%=  yield_content :description %>" />
+		<meta property="og:image" content="<%= yield_content :image %>" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<%= stylesheet_link_tag 'normalize', 'site' %>
+		<%= yield_content :stylesheet_tags %>
+
+		<script src="http://code.jquery.com/jquery.js"></script>
+    <%= javascript_include_tag 'jquery.artificial', 'imagesloaded.pkgd.min', 'packery.pkgd.min', 'jquery.scrollsnap.hacked', 'jquery.easing.min', 'imgLiquid-min', 'artificial' %>
+		
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700' rel='stylesheet' type='text/css'>
+		
+	</head>
+  
+  <body class="<%= page_classes %>">
+
+		<script type="text/javascript">
+			// when the DOM is ready...
+            $('document').ready(function(){
+				// load the footer's logo
+                $('#artificial').artificialLogo();
+
+				// apply packery
+				var $packeryContainer = $('.packery');
+				$packeryContainer.packery({
+				  itemSelector: '.packed'
+				});
+				// and re-flow when images within are loaded
+				$packeryContainer.imagesLoaded(function(){
+					$packeryContainer.packery();
+				});
+				
+  			$(".square").imgLiquid({
+      		fill: true,
+      		horizontalAlign: "center",
+      		verticalAlign: "50%"
+ 				});
+			});
+						
+    </script>
+
+    <%= yield %>		
+		
+		<!-- footer -->
+	    <div id="footer">
+	      <div class="flexcontainer">
+	        
+					<div class="col-3">
+						<div class="padded">
+							<p>If you enjoy my paintings and other creations, please take a moment to like my page on <a href="https://www.facebook.com/ShannonEThomasArt">Facebook</a> or follow me on <a href="https://twitter.com/shannonethomas">Twitter</a>.</p>
+						</div>
+					</div>
+	        
+					<div class="col-3">
+						<div class="padded">
+							<p>Two years ago, I co-founded <a href="http://theartificial.nl">The Artificial</a>, a UX and digital product design agency in Amsterdam.</p>
+						</div>
+					</div>
+        	
+					<div class="col-3">
+						<div class="padded">
+			        <p>You can find my personal design portfolio on <a href="https://www.behance.net/shannonethomas">Behance</a> and explore works in progress on <a href="http://dribbble.com/shannonethomas">Dribbble</a>.</p>
+						</div>
+					</div>
+					<div class="col-3">
+						<div class="padded">
+			        <p class="quarter">Find my photography on <a href="http://www.flickr.com/photos/alwaysayingoodbye/">Flickr</a> and <a href="http://statigr.am/shannonethomas">Instagram</a>. For past thoughts, blog archives will be arriving soon.</p>
+						</div>
+					</div>
+					
+				</div>
+	    </div>
+    
+	    <!-- Google Analytics -->
+	    <script type="text/javascript">
+	      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	    </script>
+	    <script type="text/javascript">
+	      try {
+	        var pageTracker = _gat._getTracker("UA-4427180-2");
+	        pageTracker._trackPageview();
+	      } catch(err) {}
+	    </script>
+		
+    <% if config[:environment] == :development %>
+      <% unless content_for? :google_tracking_id %>
+        <div>
+          <span class="warning">
+            No Google tracking ID found.
+          </span>
+          <small>This warning will only appear during development.</small>
+        </div>
+      <% end %>
+    <% elsif content_for? :google_tracking_id %>
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', '<%= content_for :google_tracking_id %>', 'auto');
+        ga('send', 'pageview');
+
+      </script>
+    <% else %>
+      <%= config[:environment] %>
+      <!-- no tracking ID found -->
+    <% end %>
+  </body>
+</html>
+

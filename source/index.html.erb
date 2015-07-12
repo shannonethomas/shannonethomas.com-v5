@@ -1,76 +1,69 @@
 ---
-title: An archive of beautiful things by Shannon E. Thomas  
-layout: index
-navigation: artworks
+layout: multiple_layout
 ---
 
-<div class="series">
-  <a href="stories.html"><h1>Stories</h1></a>    
-  <a href="stories.html"><img src="../images/thumb/stories_01.jpg"></a>     
-  <a href="stories.html"><img src="../images/thumb/stories_02.jpg"></a>     
-  <a href="stories.html"><img src="../images/thumb/stories_03.jpg"></a>     
-  <a href="stories.html"><img src="../images/thumb/stories_04.jpg"></a>     
-</div>
+<script type="text/javascript">
+  // when the DOM is ready...
+  $('document').ready(function(){
+    // carousel
+    $('#carousel').theArtificialCarousel({
+      scrollingSelector: '.scrolling',
+      overlaySelector: '.overlay',
+      ga: false
+    });
+  });
+</script>
 
-<div class="series">
-  <a href="2012.html"><h1>Paintings and Drawings from 2012</h1></a>    
-  <a href="2012.html"><img src="../images/thumb/2012_01.jpg"></a>    
-  <a href="2012.html"><img src="../images/thumb/2012_02.jpg"></a>    
-  <a href="2012.html"><img src="../images/thumb/2012_03.jpg"></a>    
-  <a href="2012.html"><img src="../images/thumb/2012_04.jpg"></a>     
-</div>
-
-<div class="series">
-  <a href="zookeeper.html"><h1>The Zookeeper's Daughters</h1></a>    
-   <a href="zookeeper.html"><img src="../images/thumb/zookeeper_01.jpg"></a>      
-   <a href="zookeeper.html"><img src="../images/thumb/zookeeper_02.jpg"></a>      
-   <a href="zookeeper.html"><img src="../images/thumb/zookeeper_03.jpg"></a>     
-</div>
-
-<div class="series">
-  <a href="midnight.html"><h1>Midnight in the Garden</h1></a>    
-  <a href="midnight.html"><img src="../images/thumb/midnight_01.jpg"></a>      
-  <a href="midnight.html"><img src="../images/thumb/midnight_02.jpg"></a>      
-  <a href="midnight.html"><img src="../images/thumb/midnight_03.jpg"></a>      
-  <a href="midnight.html"><img src="../images/thumb/midnight_04.jpg"></a>     
-</div>
-
-<div class="series">
-  <a href="lookingglass.html"><h1>Through the Looking Glass</h1></a>    
-  <a href="lookingglass.html"><img src="../images/thumb/lookingglass_01.jpg"></a>       
-  <a href="lookingglass.html"><img src="../images/thumb/lookingglass_02.jpg"></a>       
-  <a href="lookingglass.html"><img src="../images/thumb/lookingglass_03.jpg"></a>       
-  <a href="lookingglass.html"><img src="../images/thumb/lookingglass_04.jpg"></a>     
-</div>
-
-<div class="series">
-  <a href="treehouse.html"><h1>The Treehouse Club</h1></a>    
-  <a href="treehouse.html"><img src="../images/thumb/treehouse_01.jpg"></a>       
-  <a href="treehouse.html"><img src="../images/thumb/treehouse_02.jpg"></a>       
-  <a href="treehouse.html"><img src="../images/thumb/treehouse_03.jpg"></a>       
-  <a href="treehouse.html"><img src="../images/thumb/treehouse_04.jpg"></a>     
-</div>
-
-<div class="series">
-  <a href="whiteknight.html"><h1>Without the White Knight</h1></a>    
-  <a href="whiteknight.html"><img src="../images/thumb/whiteknight_01.jpg"></a>       
-  <a href="whiteknight.html"><img src="../images/thumb/whiteknight_02.jpg"></a>       
-  <a href="whiteknight.html"><img src="../images/thumb/whiteknight_03.jpg"></a>       
-  <a href="whiteknight.html"><img src="../images/thumb/whiteknight_04.jpg"></a>     
-</div>
-
-<div class="series">
-  <a href="redshoes.html"><h1>The Tragedy Red Shoes</h1></a>    
-  <a href="redshoes.html"><img src="../images/thumb/redshoes_01.jpg"></a>      
-  <a href="redshoes.html"><img src="../images/thumb/redshoes_02.jpg"></a>      
-  <a href="redshoes.html"><img src="../images/thumb/redshoes_03.jpg"></a>      
-  <a href="redshoes.html"><img src="../images/thumb/redshoes_04.jpg"></a>     
-</div>     
-
-<div class="series">
-  <a href="princess.html"><h1>The Princess and the Media</h1></a>    
-  <a href="princess.html"><img src="../images/thumb/princess_01.jpg"></a>      
-  <a href="princess.html"><img src="../images/thumb/princess_02.jpg"></a>      
-  <a href="princess.html"><img src="../images/thumb/princess_03.jpg"></a>      
-  <a href="princess.html"><img src="../images/thumb/princess_04.jpg"></a>     
-</div>    
+<!-- page content -->
+<div id="content">
+		
+	<!-- work in progress -->
+		
+	<div class="bleed"><img src="images/possiblefutures/carbonswan.jpg" alt="carbon swan">
+		<div class="flexcontainer" style="padding-top: 40px;">
+			<div class="col-8 right-4">
+				<div class="padded">
+					<h2>Work in progress</h2>
+					<p>My current work explores possible futures as science fiction content mixes with classical painting.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- framework overview -->
+	<div class="flexcontainer" style="padding-top: 60px;">
+		<div class="col-12">
+			<div class="padded">
+				<h2>Basic scss with layers for cusomization.</h2>
+			</div>
+		</div>
+		<div class="col-3">
+			<div class="padded">
+				<h4>framework</h4>
+				<p>The Artificial framework has three basic stylesheets, pulled in by framework.scss. These stylesheets, starting with the "artificial" prefix, specify the basic structure of the framework. These files should never be manipulated, and styles should be modified using .scss files with the "site" prefix.</p>
+			</div>
+		</div>
+		<div class="col-3">
+			<div class="padded">
+				<h4>grid</h4>
+				<p>The Artificial Framework makes use of a twelve-column grid with breaking points for mobile and tablet. On mobile, the grid is a single fluid column; on tablet a 720px grid of 60px columns; and on desktop a 960px grid of 80px columns.</p>
+			</div>
+		</div>
+		<div class="col-3">
+			<div class="padded">
+				<h4>colors</h4>
+				<p>The entire Artificial color palette is contained in artificial-colors.scss. Each base hue also has a pale, dark, and darkest value. There are nine specified gradations of both warm and cool grey.</p>
+			</div>
+		</div>
+		<div class="col-3">
+			<div class="padded">
+				<h4>base</h4>
+				<p>Base specifies the basics of an Artificial site's header, optional sub-header, and footer. Styles for artificial-base are contained in site-base, and should be edited to fit your site. </p>
+			</div>
+		</div>
+	</div>
+	
+	
+	<!-- end reference -->
+	
+</section>

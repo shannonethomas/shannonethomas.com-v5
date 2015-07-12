@@ -1,0 +1,233 @@
+// for header and footer elements
+
+.padded-lr {
+	padding: 10px 16px 10px 16px;
+}
+
+// top header
+// mobile
+@media only screen {
+	#header {
+		background-color: $white;
+
+		.topbar {
+			border-top-color: $turquoise;
+		}
+		
+		.flexcontainer {
+			border-bottom-color: $warm-grey-20;
+		}
+		
+		#nav-primary {
+			ul {	
+				li {
+					a {
+						color: $warm-grey-90;
+					}
+		
+					a:hover {
+						color: $turquoise;
+					}
+				}
+				li.active a {
+					color: $turquoise;
+				}
+			}
+		}
+	}
+	
+	#underheader {
+		background-color: $white;
+		background: URL("../images/balloon.png") center no-repeat;
+	}
+	
+	#nav-secondary {
+		border-bottom-color: $warm-grey-20;
+	
+		ul {		
+			li {
+				a {
+					color: $warm-grey-30;
+				}		
+				a:hover {
+					color: $warm-grey-40;
+				}
+			}
+		}	
+	}
+}
+
+// side header
+// mobile, tablet, and desktop
+@media only screen {
+	#header-side {
+		.topbar {
+			border-top-color: $turquoise;
+		}
+		.flexcontainer {
+			li {
+				margin: 40px 0 0 0;
+				
+				a {
+					opacity: 0.4;
+				}
+				
+				a:hover {
+					opacity: 1.0;
+				}
+			}
+		}
+	}	
+}
+
+// content
+#content {
+	background-color: $white;
+}
+
+.card {
+	background-color: $warm-grey-10;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+// footer
+
+// mobile, tablet, and desktop
+@media only screen {
+
+	#footer {
+		background-color: $white;
+		
+		.flexcontainer
+		{
+			border-top-color: $warm-grey-20;
+		}
+		h3, h4, p {
+			color: $warm-grey-90;
+		}
+			a {
+			color: $turquoise;
+		}
+		a:hover {
+			color: $dark-turquoise;
+		}
+	}
+}
+
+// eversearch
+
+#oncall {
+	background-color:rgba(255, 255, 255, 0.9);
+}
+
+
+// forms and fields
+.search {
+	background-color: $warm-grey-10;
+	border: none;
+	border-radius: 3px;
+	
+	.button {
+		background-color: $turquoise;
+		border: none;
+		border-radius: 0 3px 3px 0;
+		color: $white;
+		transition: background-color 0.4s ease;
+	}
+	.button:hover {
+		background-color: $dark-turquoise;
+	  transition: background-color 0.4s ease;
+	}
+}
+
+.field.signin {
+	background-color: $white;
+}
+
+.field {
+	background-color: $warm-grey-10;
+	border: none;
+	border-radius: 3px;
+}
+
+.button {
+	border: none;
+	border-radius: 3px;
+	color: $white;
+	transition: background-color 0.4s ease;
+}
+
+.button:hover {
+  transition: background-color 0.4s ease;
+}
+
+.button.primary {
+	background-color: $turquoise;
+}
+
+.button.primary:hover {
+	background-color: $dark-turquoise;	
+}
+
+.button.secondary {
+	background-color: $warm-grey-30;
+}
+
+.button.secondary:hover {
+	background-color: $warm-grey-50;
+}
+
+.selection {
+ border: none;
+ background-color: $warm-grey-10;
+}
+
+.dropdown-menu {
+
+	ul {
+		outline: none;
+		
+		li {
+			background-color: $warm-grey-10;
+			border-radius: 3px;
+			
+			a {
+				color: $warm-grey-90;
+			}
+			
+			ul {
+				border-radius: 3px;
+				
+				li {
+					border-radius: 0px;
+				}
+				
+				li:hover {
+					background-color: $turquoise;
+				}
+			}
+		}
+		
+		li:hover
+		{
+			ul {
+				display:block
+			}
+		}
+	}
+}	
+
+#animal-list {
+  .padded {
+		transition: opacity 0.8s ease;
+	}
+	.filter-off {
+		opacity: 0.1;
+	  transition: opacity 0.8s ease;
+	}
+}
+
+
+
