@@ -22,27 +22,7 @@
 
 		a:hover {
 			color: $white;
-		}		
-	}
-}
-
-// mobile
-@media only screen {	
-	#header {
-		width: 100%;
-		background-color: $cool-grey-90;
-		
-		#navigation {						
-			background-color: $cool-grey-90;
 		}
-	}
-}
-
-// tablet and desktop
-@media (min-device-width: 768px) {
-
-	#header {
-		height: inherit;
 	}
 }
 
@@ -56,32 +36,32 @@
 		width: 100%;
 		display: block;
 		background-color: $cool-grey-10;
-		
+
 		.flexcontainer
 
 		p {
 			font-size: .9em;
 		}
-		
+
 		a {
 			font-weight: 500;
 		}
-		
+
 		#artificial {
 			text-align: center;
 			a {
 				font-size: .9em;
-				
+
 				svg#Layer_1 {
 					width: 100%;
 				}
 			}
-		}	
-		
+		}
+
 		#about, #promo {
 			border-top-width: 1px;
 			border-top-style: solid;
-		}	
+		}
 	}
 }
 
@@ -89,24 +69,22 @@
 @media (min-device-width: 768px) {
 
 	#footer {
-		
+
 		#artificial {
 			#artlogo {
 				img {
 					width: 100%;
 				}
-			}			
-			
+			}
+
 			p {
 				display: block;
 			}
-		}		
-		
+		}
+
 		#about, #promo {
 			padding-top: 60px;
 			border: none;
-		}	
+		}
 	}
 }
-
-
