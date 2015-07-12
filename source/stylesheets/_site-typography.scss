@@ -9,24 +9,6 @@ h1, h2, h3, h4, h5, p, ul, li, a {
 	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-#navigation {
-
-	h2 {
-		color: $cool-grey-20;
-		font-weight: 300;
-		padding: 60px 0 60px 0;
-
-		a {
-			color: $cool-grey-10;
-			font-weight: 600;
-		}
-
-		a:hover {
-			color: $white;
-		}		
-	}
-}
-
 h1 {
 	font-weight: 700;
 	text-align: center;
