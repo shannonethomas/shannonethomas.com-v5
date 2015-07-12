@@ -111,6 +111,3 @@ DEPENDENCIES
   nokogiri
   redcarpet
   wdm (~> 0.1.0)
-
-BUNDLED WITH
-   1.10.4

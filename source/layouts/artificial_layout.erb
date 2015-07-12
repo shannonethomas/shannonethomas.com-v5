@@ -1,18 +1,18 @@
 <!doctype html>
 
 <html>
-	<head>		
+	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title><%= current_page.data.title || 'The Artificial' %></title>
 
 		<!-- favicon and apple touch icon -->
 		<%= yield_content :favicon_element %>
-		
-		
+
+
 		<!-- basic SEO -->
 		<meta name="keywords" content="<%= yield_content :keywords %>" />
 		<meta name="description" content="<%= yield_content :description %>" />
-		
+
 		<!-- Twitter summary card -->
 		<meta property="twitter:creator:id" content="1382202606" /> <!-- this is @veryartificial -->
 		<meta property="twitter:title" content="<%=  yield_content :title %>" />
@@ -31,12 +31,12 @@
 		<%= yield_content :stylesheet_tags %>
 
 		<script src="http://code.jquery.com/jquery.js"></script>
-    <%= javascript_include_tag 'packery.pkgd.min' %>
+    <%= javascript_include_tag 'packery.pkgd.min', 'imagesloaded.pkgd.min' %>
 		
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700' rel='stylesheet' type='text/css'>
-		
+
 	</head>
-  
+
   <body class="<%= page_classes %>">
 
 		<script type="text/javascript">
@@ -52,34 +52,34 @@
 				$packeryContainer.imagesLoaded(function(){
 					$packeryContainer.packery();
 				});
-				
+
   			$(".square").imgLiquid({
       		fill: true,
       		horizontalAlign: "center",
       		verticalAlign: "50%"
  				});
 			});
-						
+
     </script>
 
-    <%= yield %>		
-		
+    <%= yield %>
+
 		<!-- footer -->
 	    <div id="footer">
 	      <div class="flexcontainer">
-	        
+
 					<div class="col-3">
 						<div class="padded">
 							<p>If you enjoy my paintings and other creations, please take a moment to like my page on <a href="https://www.facebook.com/ShannonEThomasArt">Facebook</a> or follow me on <a href="https://twitter.com/shannonethomas">Twitter</a>.</p>
 						</div>
 					</div>
-	        
+
 					<div class="col-3">
 						<div class="padded">
 							<p>Two years ago, I co-founded <a href="http://theartificial.nl">The Artificial</a>, a UX and digital product design agency in Amsterdam.</p>
 						</div>
 					</div>
-        	
+
 					<div class="col-3">
 						<div class="padded">
 			        <p>You can find my personal design portfolio on <a href="https://www.behance.net/shannonethomas">Behance</a> and explore works in progress on <a href="http://dribbble.com/shannonethomas">Dribbble</a>.</p>
@@ -90,10 +90,10 @@
 			        <p class="quarter">Find my photography on <a href="http://www.flickr.com/photos/alwaysayingoodbye/">Flickr</a> and <a href="http://statigr.am/shannonethomas">Instagram</a>.</p>
 						</div>
 					</div>
-					
+
 				</div>
 	    </div>
-    
+
 	    <!-- Google Analytics -->
 	    <script type="text/javascript">
 	      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
@@ -105,7 +105,7 @@
 	        pageTracker._trackPageview();
 	      } catch(err) {}
 	    </script>
-		
+
     <% if config[:environment] == :development %>
       <% unless content_for? :google_tracking_id %>
         <div>
@@ -132,4 +132,3 @@
     <% end %>
   </body>
 </html>
-
