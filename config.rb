@@ -26,7 +26,7 @@
 
 # Proxy pages (http://middlemanapp.com/basics/dynamic-pages/)
 # proxy "/this-page-has-no-template.html", "/template-file.html", :locals => {
-#  :which_fake_page => "Rendering a fake page with a local variable" } 
+#  :which_fake_page => "Rendering a fake page with a local variable" }
 ###
 # Helpers
 ###
@@ -44,28 +44,27 @@
 #   end
 # end
 helpers do
-  def nav_link(link_text, url, options = {})  
+  def nav_link(link_text, url, options = {})
     options[:class] ||= ""
     options[:class] << " current" if link_text == current_resource.data.navigation
     link_to(link_text, url, options)
   end
 end
 
-set :css_dir, 'stylesheets'
-
-set :js_dir, 'javascripts'
-
+set :css_dir, 'assets/stylesheets'
+set :js_dir, 'assets/javascripts'
 set :images_dir, 'images'
 
 activate :blog do |blog|
+  blog.name = "words"
   blog.prefix = ""
-  blog.sources = "/blog/{year}-{month}-{day}-{title}.html"
-  blog.permalink = "/blog/{year}/{month}/{day}/{title}.html"
-  blog.layout = "blog-article"
+  blog.sources = "/words/{year}/{month}-{day}-{title}.html"
+  blog.permalink = "/words/{year}/{month}/{day}/{title}.html"
+  blog.layout = "words_article"
   blog.default_extension = ".md"
   blog.summary_separator = /READMORE/
 end
-page "/blog/feed.xml", layout: false
+page "/words/feed.xml", layout: false
 
 # Build-specific configuration
 configure :build do
