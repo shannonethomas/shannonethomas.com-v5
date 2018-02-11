@@ -9,3 +9,6 @@ gem 'middleman-blog'
 gem 'redcarpet'
 gem 'nokogiri'
 gem 'builder'
+
+# for Travis deployment
+gem 's3_website'
