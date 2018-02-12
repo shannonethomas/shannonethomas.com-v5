@@ -1,11 +1,18 @@
 ---
 layout: site_layout
 ---
+<% content_for :head_content do %>
+	<!-- IndieWeb -->
+	<link rel="authorization_endpoint" href="https://indieauth.com/auth">
+	<link rel="token_endpoint" href="https://tokens.indieauth.com/token">
+
+	<link rel="micropub" href="http://micropub.gerwitz.com/micropub/shannon">
+<% end %>
 
 <!-- page content -->
 <div id="content">
-	
-	<!-- main content -->	
+
+	<!-- main content -->
 	<nav id="header-home">
 		<div class="flexcontainer">
 			<div id="index-nav" class="col-12">
@@ -16,7 +23,7 @@ layout: site_layout
 			</div>
 		</div>
 	</nav>
-	
+
 	<!-- Future Present -->
 	<div class="bleed" style="background-image: url('/images/futurepresent/full_studio.jpg')">
 		<div class="overlay">
@@ -34,7 +41,7 @@ layout: site_layout
 			</div>
 		</div>
 	</div>
-	
+
 	<!-- to [icon] -->
 	<div class="flexcontainer preview">
 		<div class="col-1 left-2">
@@ -120,10 +127,10 @@ layout: site_layout
 			</div>
 		</div>
 	</div>
-	
+
 	<!-- Midnight in the Garden -->
 	<div class="dark">
-		<div class="flexcontainer preview">		
+		<div class="flexcontainer preview">
 			<div class="col-4">
 				<div class="padded">
 					<a href="midnight.html"><img src="images/midnight/thumb_sloth.jpg" alt="Sloth"></a>
@@ -151,7 +158,7 @@ layout: site_layout
 			</div>
 		</div>
 	</div>
-	
+
 	<!-- 2012 -->
 	<div class="bleed preview" style="background-image: url('/images/2012/full_coscoroba.jpg')">
 		<div class="overlay">
@@ -165,8 +172,8 @@ layout: site_layout
 		</div>
 	</div>
 
-	<!-- Sketches -->	
-	<div class="flexcontainer preview">		
+	<!-- Sketches -->
+	<div class="flexcontainer preview">
 		<div class="col-4">
 			<div class="padded">
 				<a href="sketches.html"><img src="images/sketchbook/thumb_01.jpg" alt="sketches"></a>
@@ -189,5 +196,5 @@ layout: site_layout
 		</div>
 	</div>
 
-	
+
 </section>
