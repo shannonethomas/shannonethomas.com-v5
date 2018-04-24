@@ -1,0 +1,8 @@
+sudo: false
+language: ruby
+rvm: 2.3.4 # pre-installed
+cache: bundler
+script:
+- NO_CONTRACTS=true bundle exec middleman build --no-clean
+after_success:
+- bundle exec s3_website push

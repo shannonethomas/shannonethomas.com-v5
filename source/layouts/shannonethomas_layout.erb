@@ -32,9 +32,10 @@
 
 		<script src="http://code.jquery.com/jquery.js"></script>
     <%= javascript_include_tag 'packery.pkgd.min', 'imagesloaded.pkgd.min' %>
-		
+
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700' rel='stylesheet' type='text/css'>
 
+		<%= yield_content :head_content %>
 	</head>
 
   <body class="<%= page_classes %>">

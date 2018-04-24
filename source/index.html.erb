@@ -1,6 +1,13 @@
 ---
 layout: site_layout
 ---
+<% content_for :head_content do %>
+	<!-- IndieWeb -->
+	<link rel="authorization_endpoint" href="https://indieauth.com/auth">
+	<link rel="token_endpoint" href="https://tokens.indieauth.com/token">
+
+	<link rel="micropub" href="http://micropub.gerwitz.com/micropub/shannon">
+<% end %>
 
 <!-- page content -->
 <div id="content">
