@@ -4,7 +4,7 @@
 		top: -300px;
 		height: 280px;
 		padding-top: 20px;
-		
+
 		.flexcontainer {
 			margin: 20px;
 		}
@@ -16,7 +16,7 @@
 		top: -220px;
 		height: 180px;
 		padding-top: 40px;
-		
+
 		.flexcontainer {
 			margin: auto;
 		}
@@ -24,20 +24,20 @@
 }
 
 #header {
-	background-color: $cool-grey-90;
+	background-color: $dark-violet;
 	position: fixed;
 	left: 0;
 	z-index: 102;
 	width: 100%;
-	
+
 	h2 {
-		color: $cool-grey-20;
-	
+		color: $white;
+
 		a {
-			color: $cool-grey-10;
+			color: $white;
 			font-weight: 600;
 		}
-		
+
 		a:hover {
 			color: $white;
 		}
@@ -58,7 +58,7 @@
 	width: 30px;
 	height: 30px;
 
-	background-color: $cool-grey-90;
+	background-color: $dark-violet;
 	color: $white;
 	background-repeat: no-repeat;
 	background-image: center center;
@@ -78,7 +78,7 @@
 }
 
 #header-home {
-	background-color: $cool-grey-90;
+	background-color: $dark-violet;
 	h2 {
 		font-size: 1.8em;
 	}
@@ -86,12 +86,12 @@
 
 #index-nav {
 	h2 {
-		color: $cool-grey-20;
+		color: $white;
 		font-weight: 300;
 		padding: 60px 0 60px 0;
 
 		a {
-			color: $cool-grey-10;
+			color: $white;
 			font-weight: 600;
 		}
 
@@ -99,6 +99,21 @@
 			color: $white;
 		}
 	}
+}
+
+.intro {
+	color: $white;
+
+	.link-art { color: $light-bluebell; }
+	.link-art:hover { color: $bluebell; }
+
+	.link-writing { color: $light-dandelion; }
+	.link-writing:hover { color: $dandelion; }
+
+	.link-opinions { color: $light-poppy; }
+	.link-opinions:hover { color: $poppy; }
+
+	.link-artificial { color: $white; }
 }
 
 // content
@@ -115,19 +130,19 @@
 	}
 
 	a.button {
-		background-color: $cool-grey-80;
+		background-color: $white;
 		color: $white;
 		padding: 10px 30px 10px 30px;
 		margin-top: 30px;
 		display: inline-block;
 	}
 	a.button:hover {
-		background-color: $cool-grey-70;
+		background-color: $dark-violet;
 	}
 }
 
 .dark {
-	background-color: $cool-grey-10;
+	background-color: $white;
 	width: 100%;
 }
 
@@ -151,10 +166,10 @@
 
 	a.button {
 		background-color: $white;
-		color: $cool-grey-80;
+		color: $dark-violet;
 	}
 	a.button:hover {
-		background-color: $cool-grey-10;
+		background-color: $white;
 	}
 }
 
@@ -166,7 +181,7 @@
 	height: 40px;
 	padding: 120px 0 120px 0;
 	display: block;
-	background-color: $turquoise;
+	background-color: $dark-violet;
 	a {
 		font-weight: 700;
 		color: $white;
@@ -180,20 +195,20 @@
 @media only screen {
 
 	#footer {
-		background-color: $white;
+		background-color: $light-grey;
 
 		.flexcontainer
 		{
-			border-top-color: $warm-grey-20;
+			border-top-color: $white;
 		}
 		h3, h4, p {
-			color: $warm-grey-90;
+			color: $dark-violet;
 		}
 			a {
-			color: $turquoise;
+			color: $dark-violet;
 		}
 		a:hover {
-			color: $dark-turquoise;
+			color: $dark-violet;
 		}
 	}
 }

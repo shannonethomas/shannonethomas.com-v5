@@ -5,33 +5,17 @@
 h1, h2, h3, h4, h5, p, ul, li, a {
 	margin: 0;
 	padding: 0;
-	color: $warm-grey-90;
+	color: $black;
 	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-h1 {
-	font-weight: 700;
-	text-align: center;
-}
+p.intro { font-weight: 300; }
 
-h2 {
-	font-weight: 300;
-}
+.link-art, .link-writing, .link-opinions, .link-artificial { font-weight: 500; }
 
-h3 {
-	font-weight: 300;
-}
-
-h4 {
-	font-weight: 600;
-}
 
 ul, li {
 	list-style-type: none;
-}
-
-p {
-	font-weight: 300;
 }
 
 a {
@@ -44,85 +28,24 @@ h1, h2, h3, h4, h5, p {
 
 // for mobile
 @media only screen and (min-device-width: 320px) {
-	h1 {
-		font-size: 1.8em;
-		line-height: 1.5em;
-	}
-
-	h2 {
-		font-size: 1.2em;
-		line-height: 1.4em;
-	}
-
-	h3 {
-		font-size: 1.125em;
-		line-height: 1.11em;
-	}
-	
-	h4 {
-		font-size: 1.2;
-		line-height: 1.1;
-	}
-
-	p, li, ul, a {
-		font-size: 1em;
-		line-height: 1em;
+	p.intro {
+		font-size: 36pt;
+		line-height: 46pt;
 	}
 }
 
 // for tablet
 @media only screen and (min-device-width: 768px) {
-	h1 {
-		font-size: 1.8em;
-		line-height: 1.5em;
-	}
-
-	h2 {
-		font-size: 1.2em;
-		line-height: 1.4em;
-	}
-	
-	h3 {
-		font-size: 1.4em;
-		line-height: 1.2em;
-	}
-		
-	h4 {
-		font-size: 1.2;
-		line-height: 1.1;
-	}
-	
-	p, li, ul, a {
-		font-size: 1em;
-		line-height: 1.2em;
+	p.intro {
+		font-size: 28pt;
+		line-height: 36pt;
 	}
 }
 
 // for desktop
 @media only screen and (min-width: 960px) {
-	h1 {
-		font-size: 1.8em;
-		line-height: 1.5em;
-	}
-
-
-	h2 {
-		font-size: 1.2em;
-		line-height: 1.2em;
-	}
-
-	h3 {
-		font-size: 1.4em;
-		line-height: 1.2em;
-	}
-	
-	h4 {
-		font-size: 1.2;
-		line-height: 1.1;
-	}
-	
-	p, li, ul, a {
-		font-size: 1em;
-		line-height: 1.2em;
+	p.intro {
+		font-size: 36pt;
+		line-height: 46pt;
 	}
 }
