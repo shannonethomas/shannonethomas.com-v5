@@ -1,21 +1,53 @@
 <% wrap_layout :site_layout do %>
 
-	<nav id="header">
-		<div class="flexcontainer">
-			<div id="navigation" class="col-12">
-				<h2><a href="index.html">Hello</a>, I’m Shannon E. Thomas.<br/>
-					I love to <a href="/painting.html">paint and draw</a>, and I don’t go anywhere without my <a href="/sketches.html">sketchbook</a>. I am obsessed with <a href="/design.html">design</a>. In 2013, I founded <a href="https://theartificial.com/">The Artificial</a>, a boutique UX design agency in Amsterdam. I like a lot of <a href="/etcetera.html">other things</a> too! Want to see more? I’m all over <a href="/elsewhere.html">the internet</a>.</h2>
-
-			</div>
+	<nav id="side-bar">
+		<div class="icons">
+			<ul>
+				<a href="/">
+					<li>
+						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
+							<path class="nav-icon" d="M16,4l-5,5V6H6v23h20V14L16,4z M8,8h1v3l-1,1V8z M15,27v-5h2v5H15z M24,27h-5v-7h-6v7H8V16 v-1.171l8-8l8,8V27z"/>
+						</svg>
+					</li>
+				</a>
+				<a href="/art.html">
+					<li>
+						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
+						 <path class="nav-icon" d="M28,19h-1V6h-8V4h-6v2H5v13H4v5h7.98l-0.8,4h2.04l0.8-4H15v4h2v-4h0.98l0.8,4h2.04l-0.8-4 H28V19z M15,6h2v1h-2V6z M7,8h6v1h6V8h6v11H7V8z M26,22H6v-1h20V22z"/>
+						</svg>
+					</li>
+				</a>
+				<a href="/writing.html">
+					<li>
+						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
+							 <path class="nav-icon" d="M9,13H7v-2h2V13z M15,11h-2v2h2V11z M22.441,12.36l-0.347-1.97l-1.97,0.347l0.347,1.97 L22.441,12.36z M28,26.611L20.122,28L18,15.968V28h-6h-2H4V6h6h2h6v0.035l6.18-1.09L28,26.611z M10,23H6v3h4V23z M10,8H6v13h4V8z M16,23h-4v3h4V23z M16,8h-4v13h4V8z M20.876,20.759l3.939-0.695L22.557,7.262l-3.939,0.695L20.876,20.759z M21.744,25.683 l3.939-0.695l-0.521-2.954l-3.939,0.695L21.744,25.683z"/>
+						</svg>
+					</li>
+				</a>
+				<a href="/opinions.html">
+					<li>
+						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
+							<path class="nav-icon" d="M25,21h-4.828L18,23.172V21H7V7h18V21z M27,5H5v18h11v5l5-5h6V5L27,5z M13,16h-2v2h2V16z M17,16 h-2v2h2V16z M21,16h-2v2h2V16z"/>
+						</svg>
+					</li>
+				</a>
+				<a href="/etcetera.html">
+					<li>
+						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
+							 <path class="nav-icon" d="M12.707,20.707l-1.414-1.414l8-8l1.414,1.414L12.707,20.707z M13.964,20.864 c-0.077,0.529-0.312,1.019-0.697,1.404l-2.974,2.976c-0.944,0.943-2.591,0.943-3.536,0c-0.975-0.975-0.975-2.562,0-3.536 l2.975-2.975c0.385-0.385,0.875-0.62,1.404-0.697l1.786-1.786C12.468,16.098,11.993,16,11.5,16c-1.202,0-2.332,0.468-3.181,1.317 l-2.976,2.976c-1.754,1.755-1.754,4.609,0,6.364c0.85,0.85,1.98,1.317,3.182,1.317c1.202,0,2.332-0.468,3.183-1.317l2.974-2.976 C15.532,22.832,16,21.702,16,20.5c0-0.493-0.098-0.968-0.249-1.422L13.964,20.864z M26.657,5.343c-0.85-0.85-1.98-1.317-3.182-1.317 c-1.202,0-2.332,0.468-3.183,1.317l-2.975,2.976C16.468,9.168,16,10.298,16,11.5c0,0.493,0.098,0.968,0.249,1.423l1.786-1.786	c0.077-0.529,0.312-1.019,0.696-1.404l2.975-2.976c0.472-0.472,1.1-0.731,1.768-0.731c0.667,0,1.295,0.26,1.768,0.731 c0.975,0.975,0.975,2.562,0,3.536l-2.975,2.975c-0.378,0.378-0.868,0.598-1.38,0.674l-1.81,1.81C19.532,15.902,20.007,16,20.5,16 c1.202,0,2.332-0.468,3.181-1.317l2.976-2.976C28.411,9.952,28.411,7.098,26.657,5.343z"/>
+						</svg>
+					</li>
+				</a>
+				<a href="http://www.theartificial.com/">
+					<li>
+						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
+							 <path class="nav-icon" d="M21,11c-2-1-4.25-1.25-6-1.25c-0.27,0-0.523,0.007-0.766,0.017L5.015,2.266l4.643,9.286 C8.593,12.415,7.468,13.596,7,15c-1,3,1,5-1,7l-0.939,0.939c-0.586,0.586-0.586,1.536,0,2.121l3.879,3.879 c0.586,0.586,1.536,0.586,2.121,0L15,25c0.191-0.191,0.346-0.273,0.471-0.273C16,24.727,16,26.191,16,27c0,1,0,3,0,3h12V17 C28,17,25,13,21,11z M26,28h-8v-1c0-0.443,0-1.114-0.086-1.72c-0.336-2.368-1.955-2.552-2.443-2.552 c-0.681,0-1.315,0.289-1.885,0.858L10,27.172L6.828,24l0.586-0.586c1.813-1.813,1.572-3.774,1.396-5.205 c-0.112-0.907-0.208-1.69,0.088-2.577c0.551-1.654,2.709-3.133,3.754-3.714c0.232-0.035,0.617-0.082,1.091-0.118 c1.369,0.823,4.389,2.745,6.551,4.907c2.516,2.516,5.083,6.566,5.707,7.575V28z M26,20.631c-1.154-1.673-2.711-3.756-4.293-5.338 c-1.226-1.226-2.675-2.359-3.987-3.286c0.799,0.157,1.62,0.4,2.385,0.782c2.732,1.366,5.006,3.86,5.894,4.917V20.631z M11,16h2v2h-2 V16z"/>
+						</svg>
+					</li>
+				</a>
+			</ul>
 		</div>
-		<div class="trigger"></div>
 	</nav>
-
-	<script>
-		$("#header .trigger").on("click", function() {
-			$("#header").toggleClass("open");
-		});
-	</script>
 
 <%= yield %>
 <% end %>

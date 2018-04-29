@@ -1,65 +1,44 @@
-// Base css
+// May 2018
 
+html, body {
+	height: 100%;
+}
 
-// footer
-// mobile
-@media only screen {
+// navigation
+#side-bar {
+	width: 100px;
+	height: 100%;
+	overflow: auto;
+	float: left;
+	z-index: 100;
+	position: fixed;
+	background-color: $darkest-violet;
+	text-align: center;
 
-	#footer {
-		margin-top: 80px;
-		padding: 40px 0 40px 0;
-		width: 100%;
-		display: block;
-		background-color: $light-grey;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 
-		.flexcontainer
+	li {
+		height: 60px;
+		margin-top: 28px;
+		.nav-icon { fill: $light-violet; }
+	}
 
-		p {
-			font-size: .9em;
-		}
+	li:hover {
+		.nav-icon { fill: $violet; }
+	}
 
-		a {
-			font-weight: 500;
-		}
-
-		#artificial {
-			text-align: center;
-			a {
-				font-size: .9em;
-
-				svg#Layer_1 {
-					width: 100%;
-				}
-			}
-		}
-
-		#about, #promo {
-			border-top-width: 1px;
-			border-top-style: solid;
-		}
+	li:active {
+		.nav-icon { fill: $light-mint; }
 	}
 }
 
-// tablet and desktop
-@media (min-device-width: 768px) {
+// footer
+#footer {
+	padding: 40px 0 40px 0;
+	background-color: $light-grey;
 
-	#footer {
-
-		#artificial {
-			#artlogo {
-				img {
-					width: 100%;
-				}
-			}
-
-			p {
-				display: block;
-			}
-		}
-
-		#about, #promo {
-			padding-top: 60px;
-			border: none;
-		}
-	}
+	p, a { color: $darkest-violet; }
+	a:hover { color: $dark-violet; }
 }

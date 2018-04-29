@@ -1,3 +1,64 @@
+// May 2018
+
+.extra-top { padding-top: 30px; }
+.extra-bottom { padding-bottom: 30px; }
+
+section#site-intro .bleed {
+	padding-top: 120px;
+	padding-bottom: 140px;
+}
+
+section#related-links {
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+
+section#gallery {
+	margin-top: 40px;
+	margin-bottom: 80px;
+}
+
+section#intro .padded {
+	padding-top: 120px;
+	padding-bottom: 140px;
+}
+
+section#related-links {
+	h2, a { color: $darkest-violet; }
+	a:hover { color: $dark-violet; }
+}
+
+ul.top-links { text-align: right; }
+
+ul.top-links li {
+	display: inline;
+	padding-left: 20px;
+	color: $white;
+}
+
+.top-links, .top-links a { color: $mint; }
+
+.top-links a:hover { color: $light-mint; }
+
+.intro {
+	padding-bottom: 40px;
+	color: $white;
+
+	a { color: $mint; }
+	a:hover { color: $light-mint; }
+}
+
+ul.bottom-links li { padding-bottom: 10px; }
+
+.caption {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border-top: 1px solid $darkest-violet;
+	border-bottom: 1px solid $darkest-violet;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
 // for header and footer elements
 @media only screen and (min-device-width: 320px) {
 	#header {
@@ -35,7 +96,7 @@
 
 		a {
 			color: $white;
-			font-weight: 600;
+			font-weight: 700;
 		}
 
 		a:hover {
@@ -44,171 +105,21 @@
 	}
 }
 
-#header.open {
-	top: 0;
+.bleed.darkest-violet { background-color: $darkest-violet; }
+.bleed.dark-violet { background-color: $dark-violet; }
+.bleed.violet { background-color: $violet; }
+.bleed.light-violet { background-color: $light-violet; }
+
+.bleed.darkest-mint { background-color: $darkest-mint; }
+.bleed.light-mint { background-color: $light-mint; }
+
+.bleed.light-grey { background-color: $light-grey; }
+.bleed.white { background-color: $white; }
+
+.bleed.darkest-violet, .bleed.dark-violet, .bleed.violet, .bleed.darkest-mint {
+	p, a { color: $white; }
 }
 
-#header .trigger {
-	position: absolute;
-	bottom: -90px;
-	left: 0px;
-	margin: 0px;
-	padding: 30px;
-	z-index: 101;
-	width: 30px;
-	height: 30px;
-
-	background-color: $dark-violet;
-	color: $white;
-	background-repeat: no-repeat;
-	background-image: center center;
-}
-
-#header .trigger {
-	background-image: url('/images/ic_open.svg');
-}
-#header.open .trigger {
-	background-image: url('/images/ic_close.svg');
-}
-
-#header {
-	-webkit-transition: top 0.3s ease;
-	-moz-transition: top 0.3s ease;
-	transition: top 0.3s ease;
-}
-
-#header-home {
-	background-color: $dark-violet;
-	h2 {
-		font-size: 1.8em;
-	}
-}
-
-#index-nav {
-	h2 {
-		color: $white;
-		font-weight: 300;
-		padding: 60px 0 60px 0;
-
-		a {
-			color: $white;
-			font-weight: 600;
-		}
-
-		a:hover {
-			color: $white;
-		}
-	}
-}
-
-.intro {
-	color: $white;
-
-	.link-art { color: $light-bluebell; }
-	.link-art:hover { color: $bluebell; }
-
-	.link-writing { color: $light-dandelion; }
-	.link-writing:hover { color: $dandelion; }
-
-	.link-opinions { color: $light-poppy; }
-	.link-opinions:hover { color: $poppy; }
-
-	.link-artificial { color: $white; }
-}
-
-// content
-#content {
-	background-color: $white;
-}
-
-.preview {
-	padding: 60px 0 60px 0;
-	position: relative;
-
-	p {
-		padding-top: 20px;
-	}
-
-	a.button {
-		background-color: $white;
-		color: $white;
-		padding: 10px 30px 10px 30px;
-		margin-top: 30px;
-		display: inline-block;
-	}
-	a.button:hover {
-		background-color: $dark-violet;
-	}
-}
-
-.dark {
-	background-color: $white;
-	width: 100%;
-}
-
-.overlay {
-	position: absolute;
-	bottom: 0px;
-	width: 100%;
-	background-image: -webkit-gradient(
-	  linear, left top, left bottom,
-		from(rgba(0,0,0,0.0)),
-	  to(rgba(0,0,0,0.75))
-	);
-
-	h1, h2, p {
-			color: $white;
-			a {
-				font-weight: 600;
-				color: $white;
-			}
-	}
-
-	a.button {
-		background-color: $white;
-		color: $dark-violet;
-	}
-	a.button:hover {
-		background-color: $white;
-	}
-}
-
-.centered {
-	text-align: center;
-}
-
-.outlink {
-	height: 40px;
-	padding: 120px 0 120px 0;
-	display: block;
-	background-color: $dark-violet;
-	a {
-		font-weight: 700;
-		color: $white;
-	}
-}
-
-
-// footer
-
-// mobile, tablet, and desktop
-@media only screen {
-
-	#footer {
-		background-color: $light-grey;
-
-		.flexcontainer
-		{
-			border-top-color: $white;
-		}
-		h3, h4, p {
-			color: $dark-violet;
-		}
-			a {
-			color: $dark-violet;
-		}
-		a:hover {
-			color: $dark-violet;
-		}
-	}
+.bleed.light-mint, .bleed.light-violet, .bleed.light-grey, .bleed.white {
+	p, a { color: $darkest-violet; }
 }
