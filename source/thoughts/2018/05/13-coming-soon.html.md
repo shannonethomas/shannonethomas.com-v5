@@ -1,6 +1,6 @@
 ---
 layout: thought
-date: 2018-05-13T22:14:39+00:00
+date: 2018-05-13T22:38:00+01:00
 slug: coming-soon
 tags:
 ---
