@@ -67,8 +67,14 @@ ul.bottom-links li { padding-bottom: 10px; }
 	}
 }
 
-ol.h-feed {
+ol.h-feed, ol.thoughts-list {
 	padding: 0;
+}
+
+ol.thoughts-list {
+	li {
+		margin-bottom: 40px;
+	}
 }
 
 .h-entry {
