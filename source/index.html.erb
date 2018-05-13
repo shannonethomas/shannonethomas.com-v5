@@ -92,25 +92,26 @@ layout: site_layout
 					</ul>
 				</div>
 			</div>
-			<div class="col-3">
+			<div class="col-6">
 				<div class="extra-padded">
 					<h2 class="small-title extra-bottom">Thoughts</h2>
-					<ul class="bottom-links">
-						<li>Lorem</li>
-						<li>Ipsum</li>
-						<li>Dolor</li>
-						<li>Sit</li>
-						<li>Amet</li>
-					</ul>
-				</div>
-			</div>
-			<div class="col-3">
-				<div class="extra-padded">
-					<h2 class="small-title extra-bottom">Etcetera</h2>
-					<ul class="bottom-links">
-						<li><a href="https://hans.gerwitz.com">My Boo</a></li>
-						<li><a href="https://theartificial.com">My Company</a></li>
-					</ul>
+					<ol class="thoughts-list">
+					<% blog('thoughts').articles[0...5].each_with_index do |thought, i| %>
+						<% next if thought.body.empty? %>
+						<li>
+						<div class="thought">
+							<div class="content">
+							<%= thought.body %>
+							</div>
+							<div class="meta">
+							<% link_to thought do %>
+								&mdash;&nbsp;<%= thought.date.strftime('%B %e, %Y, %k:%M') %>
+							<% end %>
+							</div>
+						</div>
+						</li>
+						<% end %>
+					</ol>
 				</div>
 			</div>
 		</div>
