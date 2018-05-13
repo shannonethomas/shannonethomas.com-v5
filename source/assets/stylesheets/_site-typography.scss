@@ -35,13 +35,13 @@ h1, h2, h3, h4, p { margin-top: 0; }
 
 	#footer p { font-size: 14px; }
 
-	.extra-large { font-size: 80px; }
+	.extra-large { font-size: 40px; }
 	.top-links { font-size: 14px; }
-	.small-title, .description { font-size: 24px; }
-	.bottom-links li a { font-size: 16px; }
-	.caption { font-size: 18px; }
-	.h-entry { font-size: 20px; }
-	.meta { font-size: 14px; }
+	.small-title, .description { font-size: 18px; }
+	.bottom-links li a { font-size: 14px; }
+	.caption { font-size: 14px; }
+	.h-entry { font-size: 16px; }
+	.meta { font-size: 12px; }
 }
 
 // for tablet
@@ -69,9 +69,9 @@ h1, h2, h3, h4, p { margin-top: 0; }
 
 	#footer p { font-size: 14px; }
 
-	.extra-large { font-size: 36px; }
+	.extra-large { font-size: 80px; }
 	.top-links, .caption { font-size: 14px; }
-	.small-title, .description { font-size: 18px; }
-	.bottom-links li a, .caption { font-size: 14px; }
-	.caption { font-size: 14px; }
+	.small-title, .description { font-size: 24px; }
+	.bottom-links li a, .caption { font-size: 16px; }
+	.caption { font-size: 18px; }
 }
