@@ -15,6 +15,18 @@ cache_control: public
 
 s3_reduced_redundancy: true
 
+cloudfront_distribution_id: E1VK6T87Y5XRJN
+cloudfront_distribution_config:
+  default_cache_behavior:
+    min_ttl: <%= 60 * 60 * 24 %>
+  aliases:
+    quantity: 1
+    items:
+      - shannonethomas.com
+
+cloudfront_invalidate_root: true
+cloudfront_wildcard_invalidation: true
+
 # cloudfront_distribution_id: ---
 # cloudfront_distribution_config:
 #   default_cache_behavior:
