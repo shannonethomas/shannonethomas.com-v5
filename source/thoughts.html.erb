@@ -24,37 +24,41 @@ per_page: 12
 	</section>
 
 	<section id="main">
+		<div class="flex container">
+			<div class="left-1 col-10 right-1">
 
-		<% if paginate && prev_page %>
-		<div class="pagination">
-		<!--  <p>Page <%= page_number %> of <%= num_pages %></p> -->
-		<span class="prev"><%= link_to '← Newer', prev_page %></span>
-		</div>
-		<% end %>
-
-		<ol class="thoughts-list h-feed">
-		<% page_articles.each_with_index do |thought, i| %>
-			<% next if thought.body.empty? %>
-			<li>
-			<div class="thought h-entry">
-				<div class="content e-content">
-				<%= thought.body %>
+				<% if paginate && prev_page %>
+				<div class="pagination">
+				<!--  <p>Page <%= page_number %> of <%= num_pages %></p> -->
+				<span class="prev"><%= link_to '← Newer', prev_page %></span>
 				</div>
-				<div class="meta">
-				<% link_to thought do %>
-					<time class="date dt-published" datetime="<%= thought.date.strftime("%F") %>">&mdash;&nbsp;<%= thought.date.strftime('%B %e, %Y, %k:%M') %></time>
 				<% end %>
+
+				<ol class="thoughts-list h-feed">
+				<% page_articles.each_with_index do |thought, i| %>
+					<% next if thought.body.empty? %>
+					<li>
+					<div class="thought h-entry">
+						<div class="content e-content">
+						<%= thought.body %>
+						</div>
+						<div class="meta">
+						<% link_to thought do %>
+							<time class="date dt-published" datetime="<%= thought.date.strftime("%F") %>">&mdash;&nbsp;<%= thought.date.strftime('%B %e, %Y, %k:%M') %></time>
+						<% end %>
+						</div>
+					</div>
+					</li>
+					<% end %>
+				</ol>
+
+				<% if paginate && next_page %>
+				<div class="pagination">
+				<span class="next"><%= link_to 'Older →', next_page %></span>
 				</div>
+				<% end %>
+
 			</div>
-			</li>
-			<% end %>
-		</ol>
-
-		<% if paginate && next_page %>
-		<div class="pagination">
-		<span class="next"><%= link_to 'Older →', next_page %></span>
 		</div>
-		<% end %>
-
 	</section>
 </div>
