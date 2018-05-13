@@ -1,9 +1,9 @@
 ---
-blog: notes
+blog: thoughts
 ---
 xml.instruct!
 xml.rss "version" => "2.0", "xmlns:atom" => "http://www.w3.org/2005/Atom" do
-  site_url = "https://shannonethomas.com/notes"
+  site_url = "http://shannonethomas.com/thoughts"
   xml.channel do
     xml.title "shannonethomas.com"
     xml.description "microblog"

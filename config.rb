@@ -22,12 +22,17 @@ end
 page "/words/feed.xml", layout: false
 
 activate :blog do |blog|
-  blog.name = "notes"
+  blog.name = "thoughts"
   blog.prefix = ""
-  blog.sources = "/notes/{year}/{month}/{day}-{title}.html"
-  blog.permalink = "/notes/{year}/{month}/{day}/{title}.html"
-  blog.layout = "notes_article"
+  blog.sources = "/thoughts/{year}/{month}/{day}-{slug}.html"
   blog.default_extension = ".md"
-  blog.summary_separator = /READMORE/
+
+  blog.paginate = true
+
+  blog.layout = "thought"
+
+  # blog.calendar_template = "writing/calendar_template.html"
+
+  blog.permalink = "/thoughts/{year}/{month}/{day}/{slug}.html"
 end
-page "/notes/microblog.rss", layout: false
+page "/thoughts/microblog.rss", layout: false

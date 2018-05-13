@@ -8,13 +8,12 @@
 		<!-- favicon and apple touch icon -->
 		<%= yield_content :favicon_element %>
 
-
 		<!-- basic SEO -->
 		<meta name="keywords" content="<%= yield_content :keywords %>" />
 		<meta name="description" content="<%= yield_content :description %>" />
 
 		<!-- Twitter summary card -->
-		<meta property="twitter:creator:id" content="1382202606" /> <!-- this is @veryartificial -->
+		<meta property="twitter:creator:id" content="5544642" /> <!-- this is @shannonethomas -->
 		<meta property="twitter:title" content="<%=  yield_content :title %>" />
 		<meta property="twitter:description" content="<%=  yield_content :description %>" />
 
@@ -24,6 +23,10 @@
 		<meta property="og:title" content="<%=  yield_content :title %>" />
 		<meta property="og:description" content="<%=  yield_content :description %>" />
 		<meta property="og:image" content="<%= yield_content :image %>" />
+
+    <!-- RSS feeds -->
+    <link rel="alternate" type="application/rss+xml" href="/thoughts/microblog.rss" title="Thoughts from Shannon E. Thomas">
+    <link rel="alternate" type="application/rss+xml" href="/words/feed.xml" title="Words from Shannon E. Thomas">
 
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -35,7 +38,16 @@
 
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700' rel='stylesheet' type='text/css'>
 
-		<%= yield_content :head_content %>
+    <% if current_page.data.noindex == true %>
+    <meta name="robots" content="noindex">
+    <% end %>
+    <% if current_page.data.external.present? %>
+    <link rel="canonical" href="<%= current_page.data.external %>">
+    <% else # http://www.thesempost.com/using-rel-canonical-on-all-pages-for-duplicate-content-protection/ %>
+    <link rel="canonical" href="<%= current_page.url %>">
+    <% end %>
+    <meta http-equiv="last-modifed" content="<%= File.mtime(current_page.source_file).iso8601 %>">
+    <%= yield_content :head_content %>
 	</head>
 
   <body class="<%= page_classes %>">
