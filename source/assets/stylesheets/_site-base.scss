@@ -105,6 +105,16 @@ ul.bottom-links li { padding-bottom: 10px; }
 	}
 }
 
+.preview {
+	height: 100px;
+	padding-top: 250px;
+}
+
+.button {
+	padding: 15px 30px;
+	background-color: $white;
+}
+
 .bleed.darkest-violet { background-color: $darkest-violet; }
 .bleed.dark-violet { background-color: $dark-violet; }
 .bleed.violet { background-color: $violet; }
