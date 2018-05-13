@@ -58,6 +58,16 @@ ul.bottom-links li { padding-bottom: 10px; }
 	padding-top: 20px;
 	padding-bottom: 20px;
 }
+.bleed.darkest-violet {
+	a.link-writing, a.link-art, a.link-thought, a.link-artificial {
+		color: $light-mint;
+	}
+	a.link-writing:hover, a.link-art:hover, a.link-thought:hover, a.link-artificial:hover {
+		color: $mint;
+	}
+
+}
+
 
 // for header and footer elements
 @media only screen and (min-device-width: 320px) {
