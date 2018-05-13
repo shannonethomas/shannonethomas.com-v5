@@ -14,7 +14,7 @@ p.intro, .extra-large, .description, .caption { font-weight: 300; }
 
 p.intro a, .bottom-links a, .title { font-weight: 500; }
 
-.name, .small-title, #footer a { font-weight: 700; }
+.name, .small-title, #footer a, .meta  { font-weight: 700; }
 
 ul, li { list-style-type: none; }
 
@@ -40,6 +40,8 @@ h1, h2, h3, h4, p { margin-top: 0; }
 	.small-title, .description { font-size: 24px; }
 	.bottom-links li a { font-size: 16px; }
 	.caption { font-size: 18px; }
+	.h-entry { font-size: 20px; }
+	.meta { font-size: 14px; }
 }
 
 // for tablet

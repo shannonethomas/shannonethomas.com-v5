@@ -65,9 +65,25 @@ ul.bottom-links li { padding-bottom: 10px; }
 	a.link-writing:hover, a.link-art:hover, a.link-thought:hover, a.link-artificial:hover {
 		color: $mint;
 	}
-
 }
 
+ol.h-feed {
+	padding: 0;
+}
+
+.h-entry {
+	margin-top: 60px;
+	margin-bottom: 60px;
+
+	.meta { color: $light-violet; }
+	.meta a { color: $dark-mint; }
+	.content { margin-top: 20px; }
+}
+
+.pagination {
+	margin-top: 60px;
+	margin-bottom: 60px;
+}
 
 // for header and footer elements
 @media only screen and (min-device-width: 320px) {
