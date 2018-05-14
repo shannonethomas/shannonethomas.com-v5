@@ -5,34 +5,50 @@ html, body {
 }
 
 // navigation
-#side-bar {
-	width: 100px;
-	height: 100%;
-	overflow: auto;
-	float: left;
-	z-index: 100;
-	position: fixed;
-	background-color: $darkest-violet;
-	text-align: center;
+@media only screen and (min-device-width: 320px) {
+	#side-bar {
+		width: 70px;
+		height: 100%;
+		overflow: auto;
+		float: left;
+		z-index: 100;
+		position: fixed;
+		background-color: $darkest-violet;
+		text-align: center;
 
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 
-	li {
-		height: 60px;
-		margin-top: 28px;
-		.nav-icon { fill: $light-violet; }
+		li {
+			height: 50px;
+			margin-top: 28px;
+			.nav-icon { fill: $light-violet; }
+		}
+
+		li:hover {
+			.nav-icon { fill: $violet; }
+		}
+
+		li:active {
+			.nav-icon { fill: $light-mint; }
+		}
 	}
-
-	li:hover {
-		.nav-icon { fill: $violet; }
-	}
-
-	li:active {
-		.nav-icon { fill: $light-mint; }
+	#content, #footer {
+		margin-left: 70px;
+		z-index: -100;
 	}
 }
+
+@media only screen and (min-device-width: 768px) {
+	#side-bar {
+		width: 100px;
+	}
+	#content, #footer {
+		margin-left: 100px;
+	}
+}
+
 
 // footer
 #footer {

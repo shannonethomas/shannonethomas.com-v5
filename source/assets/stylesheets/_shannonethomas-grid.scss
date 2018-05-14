@@ -5,11 +5,6 @@ body {
 	width: 100%;
 }
 
-#content, #footer {
-	margin-left: 100px;
-	z-index: -100;
-}
-
 .index #content, .index #footer {
 	margin-left: 0;
 }
@@ -118,7 +113,7 @@ img {
 	.extra-padded { padding: 8px 24px 8px 8px;}
 
 	.module {
-		height: 200px;
+		height: 380px;
 		padding-top: 40px;
 		p { padding-bottom: 40px; }
 	}
